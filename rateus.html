@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #000000, #333333); /* Gradient from black to dark gray */
+      color: #fff;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #f5a623;
+    }
+    .container {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .rate-us {
+      margin-top: 30px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 20px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .rate-us h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2em;
+      margin-bottom: 15px;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .rate-us p {
+      font-size: 1em;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .rating-stars {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+    .rating-stars i {
+      font-size: 2.5em;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+    .rating-stars i:hover {
+      color: #f5a623;
+    }
+    .rating-stars i.selected {
+      color: #f5a623;
+    }
+    .feedback-textarea {
+      width: 100%;
+      height: 120px;
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      resize: none;
+      transition: border 0.3s;
+    }
+    .feedback-textarea:focus {
+      border-color: #f5a623;
+      outline: none;
+    }
+    .submit-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .submit-btn:hover {
+      background-color: #f5a623;
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .submit-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    .confirmation-message {
+      font-size: 1.1em;
+      color: #4CAF50;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PORTFOLIO</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="q1.html">Quarter 1</a></li>
+        <li><a href="q2.html">Quarter 2</a></li>
+        <li><a href="q3.html">Quarter 3</a></li>
+        <li><a href="q4.html">Quarter 4</a></li>
+        <li><a href="whatsnext.html">What’s Next</a></li>
+        <li><a href="rateus.html">Rate Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="rate-us">
+      <h2>We Value Your Feedback!</h2>
+      <p>Thank you for visiting our portfolio! We are excited to hear your thoughts. Please rate our work below, and feel free to share any additional comments or suggestions to help us improve.</p>
+
+      <!-- Star Rating System -->
+      <div class="rating-stars">
+        <i class="star" data-rate="1">&#9733;</i>
+        <i class="star" data-rate="2">&#9733;</i>
+        <i class="star" data-rate="3">&#9733;</i>
+        <i class="star" data-rate="4">&#9733;</i>
+        <i class="star" data-rate="5">&#9733;</i>
+      </div>
+
+      <!-- Feedback Section -->
+      <textarea class="feedback-textarea" placeholder="Leave your detailed feedback here..."></textarea>
+
+      <!-- Submit Button -->
+      <button class="submit-btn" disabled>Submit Feedback</button>
+      
+      <!-- Confirmation Message -->
+      <p class="confirmation-message" style="display: none;">Thank you for your feedback! Your response has been submitted successfully.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p><strong>Campus: LAS PINAS</strong> OBMC</p>
+    <p><strong>Group Members:</strong> Moya | Moyaen | Pangilinan | Panuncialman | Guevarra</p>
+  </footer>
+
+  <script>
+    // Star Rating System
+    const stars = document.querySelectorAll('.star');
+    const submitBtn = document.querySelector('.submit-btn');
+    const textarea = document.querySelector('.feedback-textarea');
+    const confirmationMessage = document.querySelector('.confirmation-message');
+    
+    let rating = 0;
+
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        rating = star.dataset.rate; // Set rating based on the clicked star
+        stars.forEach(s => {
+          if (s.dataset.rate <= rating) {
+            s.classList.add('selected');
+          } else {
+            s.classList.remove('selected');
+          }
+        });
+        submitBtn.disabled = false; // Enable the submit button once rating is selected
+      });
+    });
+
+    // Enable or disable submit button based on textarea content
+    textarea.addEventListener('input', () => {
+      if (textarea.value.trim() !== '' && rating > 0) {
+        submitBtn.disabled = false; // Enable the submit button when there's feedback and rating
+      } else {
+        submitBtn.disabled = true; // Disable submit button if not filled
+      }
+    });
+
+    // Handle the submit feedback action
+    submitBtn.addEventListener('click', () => {
+      // Reset the feedback area and hide confirmation message
+      textarea.value = ''; // Clear the textarea
+      stars.forEach(star => star.classList.remove('selected')); // Reset the stars
+      submitBtn.disabled = true; // Disable the submit button
+
+      // Display confirmation message
+      confirmationMessage.style.display = 'block';
+      
+      // Hide the confirmation message after 3 seconds
+      setTimeout(() => {
+        confirmationMessage.style.display = 'none';
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
